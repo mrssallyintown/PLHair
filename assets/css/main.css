@@ -3578,7 +3578,7 @@ input, select, textarea {
 		display: none;
 		position: absolute;
 		background: #222;
-		min-width: 225px;
+		min-width: 200px;
 		box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 		z-index: 1;
 		}
