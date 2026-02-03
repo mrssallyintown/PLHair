@@ -50,7 +50,22 @@
 				offset: $header.outerHeight()
 			});
 
-	// Menu.
+		if (!$('#menu').length) {
+			var $menuInner = $('<div id="menu"><ul></ul></div>');
+			$('#nav a').not('.menuToggle').each(function(){
+				$menuInner.find('ul').append($('<li>').append($(this).clone()));
+			});
+
+			var $navUl = $('#nav > ul');
+			if (!$navUl.length) {
+				$navUl = $('<ul></ul>').appendTo($('#nav'));
+			}
+
+			var $specialLi = $('<li class="special"></li>');
+			var $menuToggle = $('<a href="#menu" class="menuToggle"><span>Menu</span></a>');
+			$specialLi.append($menuToggle).append($menuInner);
+			$navUl.prepend($specialLi);
+		}
 		$('#menu')
 			.append('<a href="#menu" class="close"></a>')
 			.appendTo($body)
