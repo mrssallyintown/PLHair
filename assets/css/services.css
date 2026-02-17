@@ -1,0 +1,56 @@
+.services-container {
+    display: flex;
+    background-color: #435017;
+    padding: 2em 2em;
+    width: 100%;
+  }
+
+.services-left {
+flex: 1;
+text-align: left;
+}
+
+.services-left h3 {
+margin: 0 0 12px 0;
+font-weight: bold;
+}
+
+.services-left ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.services-left li {
+margin: 8px 0;
+cursor: pointer;
+}
+
+.services-left li:hover {
+text-decoration: underline;
+}
+
+.services-left li.active {
+font-weight: bold;
+}
+
+.divider {
+width: 3px;
+background: black;
+margin: 0 40px;
+border-radius: 2px;
+}
+
+.services-right {
+flex: 1;
+}
+
+.price-row {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+
+.price-row span:last-child {
+font-weight: bold;
+}

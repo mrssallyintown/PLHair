@@ -50,7 +50,7 @@
 				offset: $header.outerHeight()
 			});
 
-		if (!$('#menu').length) {
+	if (!$('#menu').length) {
 			var $menuInner = $('<div id="menu"><ul></ul></div>');
 			$('#nav a').not('.menuToggle').each(function(){
 				$menuInner.find('ul').append($('<li>').append($(this).clone()));
@@ -66,24 +66,24 @@
 			$specialLi.append($menuToggle).append($menuInner);
 			$navUl.prepend($specialLi);
 		}
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right',
-				target: $body,
-				visibleClass: 'is-menu-visible'
-			});
+        $('#menu')
+            .append('<a href="#menu" class="close"></a>')
+            .appendTo($body)
+            .panel({
+                delay: 500,
+                hideOnClick: true,
+                hideOnSwipe: true,
+                resetScroll: true,
+                resetForms: true,
+                side: 'right',
+                target: $body,
+                visibleClass: 'is-menu-visible'
+            });
 
 	// Header.
 		if ($banner.length > 0
 		&&	$header.hasClass('alt')) {
-
+ 
 			$window.on('resize', function() { $window.trigger('scroll'); });
 
 			$banner.scrollex({
