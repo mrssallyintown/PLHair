@@ -1794,6 +1794,7 @@ input, select, textarea {
 		header.major p {
 			color: #fff;
 			top: 0;
+			font-size: 15px;
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2472,7 +2473,11 @@ input, select, textarea {
 		button.small,
 		.button.small {
 			font-size: 0.8em;
-			background-color: #ffffff;
+			background-color: #E9E8EA;
+		}
+
+		a.button.small {
+			color:#000000;
 		}
 
 		input[type="submit"].large,
@@ -2949,7 +2954,7 @@ input, select, textarea {
 			.wrapper.style1 button,
 			.wrapper.style1 .button {
 				box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.125);
-				color: #ffffff;
+				color: #323437;
 			}
 
 				.wrapper.style1 input[type="submit"]:hover,
@@ -2957,7 +2962,7 @@ input, select, textarea {
 				.wrapper.style1 input[type="button"]:hover,
 				.wrapper.style1 button:hover,
 				.wrapper.style1 .button:hover {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: rgba(255, 255, 255, 1);
 				}
 
 				.wrapper.style1 input[type="submit"]:active,
@@ -3580,7 +3585,7 @@ input, select, textarea {
 		position: absolute;
 		background: #222;
 		min-width: 200px;
-		box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+		box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 		z-index: 1;
 		}
 
@@ -3787,6 +3792,69 @@ input, select, textarea {
 		opacity: 1;
 	}
 
+/* Reviews */
+
+.reviews-section {
+  padding: 100px 5%;
+  text-align: center;
+  background: #A4b07a;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease;
+}
+
+.review-card {
+  flex: 0 0 calc(50% - 20px);
+  background: #E9E8EA;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.nav {
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #333;
+}
+
+p.review-text {
+	color:#323437;
+}
+
+h4.review-text {
+	font-size: 15;
+	color:#323437;
+}
+
+h2.review-text {
+	color:#323437;
+}
+
+button.nav.prev {
+	color:#E9E8EA;
+}
+
+button.nav.next {
+	color:#E9E8EA;
+}
+
 /* CTA */
 
 	#cta .inner {
@@ -3851,10 +3919,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
+		background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3922,30 +3990,64 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 6em 0 4em 0 ;
 		background-color: #323437;
-		text-align: center;
+		padding: 50px 50px;
 	}
 
-		#footer .icons {
+		.top-row {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		margin-bottom: 60px;
+		}
+
+		.top-row h1 {
+		font-weight: 100;
+		font-size: 30px;
+		line-height: 1.1;
+		white-space: nowrap;
+		}
+
+		.line {
+		flex: 1;
+		height: 1px;
+		background-color: #E9E8EA;
+		}
+
+		ul.footer-icons {
+			display: flex;
+  			align-items: center;
+  			margin: 0;
+		}
+
+		ul.footer-icons li {
+  			display: flex;  
+  			align-items: center;
+  			padding: 0 1em 0 0;
+		}
+
+		#footer .footer-icons {
+			text-align: center;
 			font-size: 1.25em;
 		}
 
-			#footer .icons a {
-				color: rgba(255, 255, 255, 0.5);
+			#footer .footer-icons a {
+				color: #E9E8EA;
 			}
 
-				#footer .icons a:hover {
+				#footer .footer-icons a:hover {
 					color: #fff;
 				}
 
 		#footer .copyright {
 			color: rgba(255, 255, 255, 0.5);
-			font-size: 0.8em;
+			font-size: 10px;
 			letter-spacing: 0.225em;
 			list-style: none;
 			padding: 0;
 			text-transform: uppercase;
+			text-align: center;
+
 		}
 
 			#footer .copyright li {
@@ -3998,13 +4100,61 @@ input, select, textarea {
 
 		}
 
+	.footer-section {
+	background-color: #5c6f64; /* muted green */
+	color: #E9E8EA;
+	padding: 50px 50px;
+	}
+
+
+	.footer.content {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+	}
+
+	.column {
+	flex: 1;
+	max-width: 400px;
+	}
+
+	.column h3 {
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+	font-weight: 500;
+	}
+
+	.column p {
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 15px;
+	}
+
+	.hours {
+	display: flex;
+	gap: 20px;
+	}
+
+	.hours p {
+	margin-bottom: 20px;
+	}
+
+	a {
+	color: #E9E8EA;
+	}
+
+	a:hover {
+	opacity: 0.8;
+	}
+
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4022,10 +4172,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.webp");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
+		background-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.webp");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
