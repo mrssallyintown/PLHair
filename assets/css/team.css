@@ -1,0 +1,17 @@
+
+.container {
+  background: #E9E8EA;
+}
+.wrapper.container input,
+.wrapper.container input::placeholder,
+.wrapper.container textarea,
+.wrapper.container h4, 
+.wrapper.container label {
+  color: black;
+}
+
+.wrapper.container input::placeholder,
+.wrapper.container textarea::placeholder {
+    color: black !important;
+}
+
