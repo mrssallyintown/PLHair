@@ -1,0 +1,46 @@
+.stylist-section {
+    background: #E9E8EA;
+}
+.stylist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.stylist-card {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.stylist-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    
+    object-fit: cover; 
+    
+    object-position: center; 
+    
+    margin-bottom: 15px;
+    display: block;
+}
+
+.stylist-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.stylist-card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #313131;
+}
+
+@media screen and (max-width: 480px) {
+    .stylist-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
