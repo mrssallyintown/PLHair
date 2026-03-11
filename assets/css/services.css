@@ -24,6 +24,9 @@
   
 }
 
+.container > .column.services {
+    min-width: 550px;
+}
 .consult-section {
   margin-top: 2em;
 }
@@ -183,7 +186,7 @@ h5{
   white-space: nowrap;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1200px) {
   .image-section {
     display: none;
   }
