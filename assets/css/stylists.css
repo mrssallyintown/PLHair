@@ -1,11 +1,11 @@
 .stylist-section {
-    background: #E9E8EA;
+    background: #fff;
 }
 .stylist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
+    gap: 1em;
+    margin: 1em; 
 }
 
 .stylist-card {
@@ -35,7 +35,11 @@
 .stylist-card p {
     margin: 0;
     font-size: 0.9em;
-    color: #313131;
+    color: #000;
+}
+
+.stylist-card p a {
+    color: #323437;
 }
 
 @media screen and (max-width: 480px) {
