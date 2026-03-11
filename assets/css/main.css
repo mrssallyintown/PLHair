@@ -3662,15 +3662,12 @@ body.is-menu-visible #menu {
   display: none;
 }
 
-@media screen and (max-width: 736px) {
-  #header nav a {
+@media screen and (max-width: 900px) {
+  #header nav ul li a{
     display: none;
   }
   #header nav a.menuToggle {
     display: block;
-  }
-  #header nav > ul > li > a.menuToggle {
-    padding: 0 1.5em;
   }
 
   #header nav > ul > li > a.menuToggle span {

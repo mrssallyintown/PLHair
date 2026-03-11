@@ -51,34 +51,55 @@
 			});
 
 	if (!$('#menu').length) {
-			var $menuInner = $('<div id="menu"><ul></ul></div>');
-			$('#nav a').not('.menuToggle').each(function(){
-				$menuInner.find('ul').append($('<li>').append($(this).clone()));
-			});
+    var $menuInner = $('<div id="menu"><ul></ul></div>');
 
-			var $navUl = $('#nav > ul');
-			if (!$navUl.length) {
-				$navUl = $('<ul></ul>').appendTo($('#nav'));
-			}
+    $('#nav > ul > li').each(function () {
 
-			var $specialLi = $('<li class="special"></li>');
-			var $menuToggle = $('<a href="#menu" class="menuToggle"><span>Menu</span></a>');
-			$specialLi.append($menuToggle).append($menuInner);
-			$navUl.prepend($specialLi);
-		}
-        $('#menu')
-            .append('<a href="#menu" class="close"></a>')
-            .appendTo($body)
-            .panel({
-                delay: 500,
-                hideOnClick: true,
-                hideOnSwipe: true,
-                resetScroll: true,
-                resetForms: true,
-                side: 'right',
-                target: $body,
-                visibleClass: 'is-menu-visible'
+        if ($(this).hasClass('dropdown')) {
+
+            $(this).find('.dropdown-content a').each(function () {
+                $menuInner.find('ul').append(
+                    $('<li>').append($(this).clone())
+                );
             });
+
+        } else {
+
+            // Normal menu items
+            var $link = $(this).children('a');
+            $menuInner.find('ul').append(
+                $('<li>').append($link.clone())
+            );
+
+        }
+
+    });
+
+    var $navUl = $('#nav > ul');
+    if (!$navUl.length) {
+        $navUl = $('<ul></ul>').appendTo($('#nav'));
+    }
+
+    var $specialLi = $('<li class="special"></li>');
+    var $menuToggle = $('<a href="#menu" class="menuToggle"><span>Menu</span></a>');
+
+    $specialLi.append($menuToggle).append($menuInner);
+    $navUl.prepend($specialLi);
+}
+
+$('#menu')
+    .append('<a href="#menu" class="close"></a>')
+    .appendTo($body)
+    .panel({
+        delay: 500,
+        hideOnClick: true,
+        hideOnSwipe: true,
+        resetScroll: true,
+        resetForms: true,
+        side: 'right',
+        target: $body,
+        visibleClass: 'is-menu-visible'
+    });
 
 	// Header.
 		if ($banner.length > 0
