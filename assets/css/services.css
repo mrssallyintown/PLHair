@@ -3,7 +3,7 @@
 
 #banner {
     height: auto;
-    min-height: 50vh;
+    min-height: 30vh;
     padding: 10rem 0; 
 }
 
@@ -79,6 +79,16 @@ body.is-mobile.landing .wrapper.style4 {
 
 h5{
   color: black;
+}
+
+#services h5,
+#services h5 + p {
+    display: inline;
+    font-size: 1em;
+}
+
+#services h5 + p a {
+    color: #000;
 }
 
 
@@ -184,6 +194,14 @@ h5{
 .service-price {
   color: black;
   white-space: nowrap;
+}
+
+#services h5 + p {
+    margin-top: 0;
+}
+
+#services h5 + p a {
+    color: #000;
 }
 
 @media(max-width: 1200px) {
