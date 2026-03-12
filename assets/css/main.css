@@ -3567,7 +3567,7 @@ body.is-menu-visible #menu {
   -ms-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
   background: #e9e8ea;
-  height: 3em;
+  height: 5em;
   left: 0;
   line-height: 3em;
   position: fixed;
@@ -3594,6 +3594,7 @@ body.is-menu-visible #menu {
   height: inherit;
   line-height: inherit;
   color: #323437;
+  text-align: center;
 }
 
 @media screen and (max-width: 736px) {
