@@ -4414,3 +4414,18 @@ img.cover {
     transform: translateY(0);
   }
 }
+
+#demo-name::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+
+#demo-email::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+
+#demo-message::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
