@@ -3397,7 +3397,6 @@ button:disabled,
   border-color: #dfdfdf;
 }
 
-
 @media screen and (max-width: 736px) {
   .wrapper.style5 .features li {
     border-top-color: #dfdfdf;
@@ -3543,7 +3542,7 @@ body.is-menu-visible #menu {
   -ms-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
   background: #e9e8ea;
-  height: 3em;
+  height: 5em;
   left: 0;
   line-height: 3em;
   position: fixed;
@@ -3564,12 +3563,41 @@ body.is-menu-visible #menu {
   top: 0;
 }
 
+h1 + h1 {
+  margin-top: 30px;
+}
+
+.logo {
+  position: relative; /* necessary for absolute children */
+  width: 100%; /* ensure it spans full page */
+  height: auto; /* adjust height to fit both h1s */
+  overflow: visible; /* make sure text is not clipped */
+  margin-left: 7em;
+}
+
+.logo h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0; /* adjust vertical position for first h1 */
+  white-space: nowrap; /* prevent line break if needed */
+}
+
+.logo h1:nth-child(1) {
+  top: 0; /* first line */
+}
+
+.logo h1:nth-child(2) {
+  top: 2em; /* second line, adjust spacing */
+}
+
 #header h1 a {
   border: 0;
   display: block;
   height: inherit;
   line-height: inherit;
   color: #323437;
+  text-align: center;
 }
 
 @media screen and (max-width: 736px) {
@@ -3640,7 +3668,7 @@ body.is-menu-visible #menu {
 }
 
 @media screen and (max-width: 900px) {
-  #header nav ul li a{
+  #header nav ul li a {
     display: none;
   }
   #header nav a.menuToggle {
@@ -3670,7 +3698,7 @@ body.is-menu-visible #menu {
 #header .dropdown-content {
   display: none;
   position: absolute;
-  background: #E9E8EA;
+  background: #e9e8ea;
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   z-index: 1;
@@ -3840,7 +3868,7 @@ body.is-menu-visible #menu {
   -ms-transition-delay: 1.25s;
   transition-delay: 1.25s;
   content: "";
-  background: #7C8386;
+  background: #7c8386;
   display: block;
   width: 100%;
   height: 100%;
