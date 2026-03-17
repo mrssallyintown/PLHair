@@ -2,6 +2,10 @@
 .team-section {
   background: #E9E8EA;
 }
+
+.wrapper.style5 {
+  padding-top: 4em;
+}
 .wrapper.container input,
 .wrapper.container input::placeholder,
 .wrapper.container textarea,
