@@ -2922,7 +2922,7 @@ button:disabled,
 }
 
 .wrapper.style1 {
-  background-color: #435017;
+  background-color: #e9e8ea;
   color: #a4b07a;
 }
 
@@ -2936,7 +2936,7 @@ button:disabled,
 .wrapper.style1 h4,
 .wrapper.style1 h5,
 .wrapper.style1 h6 {
-  color: #ffffff;
+  color: #000000;
 }
 
 .wrapper.style1 hr {
@@ -2964,7 +2964,7 @@ button:disabled,
 }
 
 .wrapper.style1 header.major p {
-  color: #e9e8ea;
+  color: #000000;
 }
 
 .wrapper.style1 label {
@@ -3070,7 +3070,7 @@ button:disabled,
 .wrapper.style1 input[type="button"]:hover,
 .wrapper.style1 button:hover,
 .wrapper.style1 .button:hover {
-  background-color: rgba(255, 255, 255, 1);
+  opacity: 1;
 }
 
 .wrapper.style1 input[type="submit"]:active,
@@ -3575,6 +3575,10 @@ h1 + h1 {
   margin-left: 7em;
 }
 
+.logo:hover {
+  opacity: 0.8;
+}
+
 .logo h1 {
   position: absolute;
   left: 50%;
@@ -3971,7 +3975,6 @@ body.is-preload #banner:after {
   flex: 0 0 calc(50% - 20px);
   background: #e9e8ea;
   padding: 40px;
-  border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: left;
   display: flex;
@@ -4000,7 +4003,8 @@ h4.review-text {
 }
 
 h2.review-text {
-  color: #323437;
+  color: #000000;
+  padding-bottom: 3em;
 }
 
 button.nav.prev {
@@ -4292,7 +4296,7 @@ a {
   color: #e9e8ea;
 }
 
-a:hover {
+p a:hover {
   opacity: 0.8;
 }
 
