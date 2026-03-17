@@ -2922,7 +2922,7 @@ button:disabled,
 }
 
 .wrapper.style1 {
-  background-color: #e9e8ea;
+  background-color: #ffffff;
   color: #a4b07a;
 }
 
@@ -3973,7 +3973,7 @@ body.is-preload #banner:after {
 
 .review-card {
   flex: 0 0 calc(50% - 20px);
-  background: #e9e8ea;
+  background: #ffffff;
   padding: 40px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: left;
