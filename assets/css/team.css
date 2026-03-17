@@ -1,31 +1,5 @@
 
-.team-section {
-  background: #E9E8EA;
-}
-
 .wrapper.style5 {
-  padding-top: 4em;
-}
-.wrapper.container input,
-.wrapper.container input::placeholder,
-.wrapper.container textarea,
-.wrapper.container h4, 
-.wrapper.container label {
-  color: black;
-}
-
-.wrapper.container input::placeholder,
-.wrapper.container textarea::placeholder {
-    color: black !important;
-}
-
-h4 {
-  color: black;
-}
-
-h5 {
-  color: black;
-  font-weight: normal;
-
+  padding-top: 5em;
 }
 
