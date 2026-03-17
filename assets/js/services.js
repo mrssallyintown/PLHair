@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll(".service-image");
 
     let currentCategory = document.querySelector(".category-item.active")?.dataset.category || "haircuts";
-    const mobileQuery = window.matchMedia('(max-width: 900px)');
+    const mobileQuery = window.matchMedia('(max-width: 736px)');
 
     const updateForScreenSize = () => {
         if (mobileQuery.matches) {

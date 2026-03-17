@@ -164,7 +164,7 @@ h5{
 
 .service-name {
   color: black;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 .dots {
@@ -199,7 +199,7 @@ h5{
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 736px) {
   .service-category h1{
     padding-top: 1.5em;
   }
@@ -213,15 +213,6 @@ h5{
 
   .container > .column.services {
     min-width: auto;
-  }
-
-  .service-name,
-  .service-price {
-    white-space: normal;
-  }
-
-  .dots {
-    display: none;
   }
 
   html,
