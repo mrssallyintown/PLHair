@@ -5,6 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const categories = document.querySelectorAll(".service-category");
     const images = document.querySelectorAll(".service-image");
 
+    let currentCategory = document.querySelector(".category-item.active")?.dataset.category || "haircuts";
+    const mobileQuery = window.matchMedia('(max-width: 900px)');
+
+    const updateForScreenSize = () => {
+        if (mobileQuery.matches) {
+            categories.forEach(section => (section.classList.add("active")));
+        } else {
+            categories.forEach(section => {
+                section.classList.toggle("active", section.id === currentCategory);
+            });
+            images.forEach(img => {
+                img.classList.toggle("active", img.id === `image-${currentCategory}`);
+            });
+        }
+    };
+
+    updateForScreenSize();
+    mobileQuery.addEventListener('change', updateForScreenSize);
+
     categoryList.addEventListener("click", function (e) {
         if (e.target.classList.contains("category-item")) {
             categoryItems.forEach(item => {

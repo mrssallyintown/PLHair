@@ -8,24 +8,19 @@
 }
 
 #services { 
-  min-height: 800px;          
   display: flex;
   align-items: top;
-  background: #E9E8EA;
+  background: #fff;
   
   }
 
 .container {
   display: grid;
   grid-template-columns: 0.5fr 2fr 1fr;
-  background: #E9E8EA;
+  background: #fff;
   text-align: left;
   margin: 1.5em;
   
-}
-
-.container > .column.services {
-    min-width: 550px;
 }
 .consult-section {
   margin-top: 2em;
@@ -39,13 +34,6 @@
   margin-top: 1em;
 }
 
-.phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 0;
-}
-
 body.landing #page-wrapper {
 	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/service-banner.webp");
 	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/service-banner.webp");
@@ -55,7 +43,6 @@ body.landing #page-wrapper {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding-top: 0;
 }
 
 body.is-mobile.landing #banner,
@@ -213,4 +200,35 @@ h5{
   }
 }
 
+@media (max-width: 900px) {
+  .service-category h1{
+    padding-top: 1.5em;
+  }
+  .categories {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container > .column.services {
+    min-width: auto;
+  }
+
+  .service-name,
+  .service-price {
+    white-space: normal;
+  }
+
+  .dots {
+    display: none;
+  }
+
+  html,
+  body,
+  #page-wrapper {
+    overflow-x: hidden;
+  }
+}
 	
