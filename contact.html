@@ -35,17 +35,12 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="stylists.html">Stylists</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li class="dropdown">
-              <a href="#">Contact</a>
-              <div class="dropdown-content">
-                <a href="contact.html">Contact us</a>
-                <a href="team.html">Join our Team</a>
-              </div>
-            </li>
+            <li><a href="contact.html">Contact</a></li>
             <li>
               <a
                 href="https://book.squareup.com/appointments/jdpug353ll5ws8/location/L2JD289P01Q9C/services"
                 target="_blank"
+                onclick="return confirmRedirect();"
                 >Book now</a
               >
             </li>
@@ -131,55 +126,61 @@
               class="img"
               src="images/salon.webp"
               alt="interior of hair salon"
-              width="100%" />
+              width="100%"
+            />
 
             <hr />
-            <h4>Any More Questions?</h4>
-            <form method="post" action="#">
-              <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall">
-                  <input
-                    type="text"
-                    name="demo-name"
-                    id="demo-name"
-                    value=""
-                    placeholder="Name"
-                  />
+            <section id="contact">
+              <h4>Contact Us</h4>
+              <p>
+                Have questions? Interested in joining our team? Get in touch!
+              </p>
+              <form method="post" action="#">
+                <div class="row gtr-uniform">
+                  <div class="col-6 col-12-xsmall">
+                    <input
+                      type="text"
+                      name="demo-name"
+                      id="demo-name"
+                      value=""
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div class="col-6 col-12-xsmall">
+                    <input
+                      type="email"
+                      name="demo-email"
+                      id="demo-email"
+                      value=""
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      name="demo-message"
+                      id="demo-message"
+                      placeholder="Enter your message"
+                      rows="6"
+                    ></textarea>
+                  </div>
+                  <div class="col-6 col-12-small">
+                    <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
+                  </div>
+                  <div class="col-12">
+                    <ul class="actions">
+                      <li>
+                        <input
+                          type="submit"
+                          value="Send Message"
+                          class="primary"
+                        />
+                      </li>
+                    </ul>
+                    <div id="form-feedback"></div>
+                  </div>
                 </div>
-                <div class="col-6 col-12-xsmall">
-                  <input
-                    type="email"
-                    name="demo-email"
-                    id="demo-email"
-                    value=""
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="col-12">
-                  <textarea
-                    name="demo-message"
-                    id="demo-message"
-                    placeholder="Enter your message"
-                    rows="6"
-                  ></textarea>
-                </div>
-                <div class="col-6 col-12-small">
-                  <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
-                </div>
-                <div class="col-12">
-                  <ul class="actions">
-                    <li>
-                      <input
-                        type="submit"
-                        value="Send Message"
-                        class="primary"
-                      />
-                    </li>
-                  </ul>
-                  <div id="form-feedback"></div>
-                </div>
-              </div>
-            </form>
+              </form>
+            </section>
           </div>
         </section>
       </article>
@@ -267,5 +268,11 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="assets/js/email.js"></script>
   </body>
 </html>

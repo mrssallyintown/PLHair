@@ -98,6 +98,10 @@
     font-weight: 900;
 }
 
+a {
+    color: #000;
+}
+
 @media screen and (max-width: 480px) {
     .stylist-grid {
         grid-template-columns: 1fr;

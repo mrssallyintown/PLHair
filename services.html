@@ -67,17 +67,12 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="stylists.html">Stylists</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li class="dropdown">
-              <a href="#">Contact</a>
-              <div class="dropdown-content">
-                <a href="contact.html">Contact us</a>
-                <a href="team.html">Join our Team</a>
-              </div>
-            </li>
+            <li><a href="contact.html">Contact</a></li>
             <li>
               <a
                 href="https://book.squareup.com/appointments/jdpug353ll5ws8/location/L2JD289P01Q9C/services"
                 target="_blank"
+                onclick="return confirmRedirect();"
                 >Book now</a
               >
             </li>
@@ -98,6 +93,7 @@
                 href="https://book.squareup.com/appointments/jdpug353ll5ws8/location/L2JD289P01Q9C/services"
                 target="_blank"
                 class="button primary"
+                onclick="return confirmRedirect();"
                 >Book Now</a
               >
             </li>
@@ -109,7 +105,7 @@
       <section id="services" class="wrapper style5">
         <div class="container fade-in">
           <div class="column categories">
-            <h1>Categories</h1>
+            <h1>Services</h1>
             <div class="category-item active" data-category="haircuts">
               Haircuts & Styling
             </div>
@@ -130,17 +126,17 @@
 
           <div class="column services">
             <!-- HAIRCUTS -->
-            <div class="service-category active" id="haircuts">
+            <section class="service-category active" id="haircuts">
               <h1>Haircuts & Styling</h1>
               <div class="price-row">
                 <span class="service-name">Women's Haircut</span
                 ><span class="dots"></span
-                ><span class="service-price">$70–$85</span>
+                ><span class="service-price">$70 – $85</span>
               </div>
               <div class="price-row">
                 <span class="service-name">Men's Haircut</span
                 ><span class="dots"></span
-                ><span class="service-price">$40–$55</span>
+                ><span class="service-price">$40 – $55</span>
               </div>
               <div class="price-row">
                 <span class="service-name">Gender Neutral Haircut</span
@@ -166,17 +162,17 @@
               <div class="price-row">
                 <span class="service-name">Wash & Blow Dry</span
                 ><span class="dots"></span
-                ><span class="service-price">$45–$55</span>
+                ><span class="service-price">$45 – $55</span>
               </div>
               <div class="price-row">
                 <span class="service-name">Wash & Blow Dry with Extensions</span
                 ><span class="dots"></span
                 ><span class="service-price">$65</span>
               </div>
-            </div>
+            </section>
 
             <!-- EXTENSIONS -->
-            <div class="service-category" id="extensions">
+            <section class="service-category" id="extensions">
               <h1>Extensions & Perms</h1>
               <div class="price-row">
                 <span class="service-name">Extensions</span
@@ -188,10 +184,10 @@
                 ><span class="dots"></span
                 ><span class="service-price">$195</span>
               </div>
-            </div>
+            </section>
 
             <!-- COLOUR -->
-            <div class="service-category" id="colour">
+            <section class="service-category" id="colour">
               <h1>Colour</h1>
               <div class="price-row">
                 <span class="service-name">Full Colour</span
@@ -206,12 +202,12 @@
               <div class="price-row">
                 <span class="service-name">Full Head Highlight</span
                 ><span class="dots"></span
-                ><span class="service-price">$265–$320</span>
+                ><span class="service-price">$265 – $320</span>
               </div>
               <div class="price-row">
                 <span class="service-name">Balayage</span
                 ><span class="dots"></span
-                ><span class="service-price">$250–$320</span>
+                ><span class="service-price">$250 – $320</span>
               </div>
               <h5>Touch Ups</h5>
               <div class="price-row">
@@ -227,13 +223,13 @@
               <div class="price-row">
                 <span class="service-name">Highlight Root Retouch</span
                 ><span class="dots"></span
-                ><span class="service-price">$175–$230</span>
+                ><span class="service-price">$175 – $230</span>
               </div>
               <div class="price-row">
                 <span class="service-name"
                   >Highlight Root Retouch with Toner</span
                 ><span class="dots"></span
-                ><span class="service-price">$195–$250</span>
+                ><span class="service-price">$195 – $250</span>
               </div>
               <div class="price-row">
                 <span class="service-name">Balayage Refresh</span
@@ -243,12 +239,12 @@
               <div class="price-row">
                 <span class="service-name">All-Over Lightening & Lifting</span
                 ><span class="dots"></span
-                ><span class="service-price">$195–$250</span>
+                ><span class="service-price">$195 – $250</span>
               </div>
-            </div>
+            </section>
 
             <!-- TREATMENTS -->
-            <div class="service-category" id="treatments">
+            <section class="service-category" id="treatments">
               <h1>Hair Treatments</h1>
               <div class="price-row">
                 <span class="service-name">Hair Botox</span
@@ -282,20 +278,20 @@
                 ><span class="dots"></span
                 ><span class="service-price">$40</span>
               </div>
-            </div>
+            </section>
 
             <!-- BEAUTY -->
-            <div class="service-category" id="beauty">
+            <section class="service-category" id="beauty">
               <h1>Beauty Services</h1>
               <div class="price-row">
                 <span class="service-name">Eyebrow Tint</span
                 ><span class="dots"></span
                 ><span class="service-price">$25</span>
               </div>
-            </div>
+            </section>
 
             <!-- EVENTS -->
-            <div class="service-category" id="events">
+            <section class="service-category" id="events">
               <h1>Special Events</h1>
               <p>
                 Is a special event coming soon? Take a breath and let us help to
@@ -325,7 +321,7 @@
                 * Please contact the salon directly for wedding package
                 specials.
               </p>
-            </div>
+            </section>
             <p>
               * Prices are determined by the education, training, and practical
               experience of individual stylists. Further charges may apply if
@@ -334,10 +330,11 @@
             </p>
             <h5>Questions?</h5>
             <p>
-              <a href="contact.html">Contact us</a> or book a
+              <a href="contact.html#contact">Contact us</a> or book a
               <a
                 href="https://book.squareup.com/appointments/jdpug353ll5ws8/location/L2JD289P01Q9C/services/E3S4U6F3SMEKQPJSFUNMCGAP"
                 target="_blank"
+                onclick="return confirmRedirect();"
                 >free consultation</a
               >
             </p>
