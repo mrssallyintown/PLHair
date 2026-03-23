@@ -53,6 +53,28 @@
 	if (!$('#menu').length) {
     var $menuInner = $('<div id="menu"><ul></ul></div>');
 
+	$('#nav > ul > li').each(function () {
+
+        if ($(this).hasClass('dropdown')) {
+
+            $(this).find('.dropdown-content a').each(function () {
+                $menuInner.find('ul').append(
+                    $('<li>').append($(this).clone())
+                );
+            });
+
+        } else {
+
+            // Normal menu items
+            var $link = $(this).children('a');
+            $menuInner.find('ul').append(
+                $('<li>').append($link.clone())
+            );
+
+        }
+
+    });
+
     var $navUl = $('#nav > ul');
     if (!$navUl.length) {
         $navUl = $('<ul></ul>').appendTo($('#nav'));

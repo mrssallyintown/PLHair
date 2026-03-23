@@ -3,16 +3,10 @@
 .stylist-section {
     background: #fff;
 }
-.stylist-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2em;
-    margin: 1em; 
-}
 
 .stylist-card {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 450px 1.5fr;
     gap: 20px;
     justify-content: center;
     align-items: start;
@@ -27,7 +21,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    width: 80%;
+    width: 90%;
     height: 1px;
     background-color: #ddd;
 
@@ -46,6 +40,7 @@
     margin-bottom: 15px;
     display: block;
     border-radius: 8px;
+    max-width: 400px;
 }
 
 .image-wrapper {
