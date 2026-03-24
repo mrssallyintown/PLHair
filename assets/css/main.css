@@ -3585,6 +3585,7 @@ h1 + h1 {
   transform: translateX(-50%);
   top: 0; /* adjust vertical position for first h1 */
   white-space: nowrap; /* prevent line break if needed */
+  font-size: 1em;
 }
 
 .logo h1:nth-child(1) {
