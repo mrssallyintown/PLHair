@@ -4290,6 +4290,42 @@ p a:hover {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 736px) {
+  #footer {
+    padding: 3em 2em 1em 2em;
+    overflow-x: hidden;
+  }
+
+  .top-row {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .top-row h1 {
+    white-space: normal;
+    font-size: 24px;
+  }
+
+  .line {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer.content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .column {
+    max-width: 100%;
+  }
+
+  .hours {
+    flex-wrap: wrap;
+  }
+}
+
 /* Map Side */
 .map-container {
   flex: 1;
