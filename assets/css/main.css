@@ -2606,7 +2606,7 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-  background-color: #435017;
+  background-color: #596a1e;
   box-shadow: none !important;
   color: #ffffff !important;
 }
@@ -3988,8 +3988,9 @@ body.is-preload #banner:after {
   }
 }
 
-.review-card h4 {
+.review-card a {
   margin-top: auto;
+  align-self: flex-start;
 }
 
 .nav {
@@ -4004,9 +4005,10 @@ p.review-text {
   color: #323437;
 }
 
-h4.review-text {
+a.review-text {
   color: #323437;
   bottom: 0px;
+  font-weight: 700;
 }
 
 h2.review-text {
