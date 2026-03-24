@@ -4442,6 +4442,11 @@ body.is-mobile.landing #footer {
   background: #fff;
 }
 
+p.gallery {
+  margin: 0;
+  padding: 10px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
