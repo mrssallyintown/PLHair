@@ -3969,6 +3969,7 @@ body.is-preload #banner:after {
   display: flex;
   gap: 40px;
   transition: transform 0.5s ease;
+  will-change: transform;
 }
 
 .review-card {
@@ -3979,6 +3980,12 @@ body.is-preload #banner:after {
   text-align: left;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .review-card {
+    flex: 0 0 100%;
+  }
 }
 
 .review-card h4 {
