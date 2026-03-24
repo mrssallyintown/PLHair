@@ -199,6 +199,10 @@ h5{
   }
 }
 
+.service-category h1 {
+  text-decoration: underline;
+}
+
 @media (max-width: 736px) {
   .service-category h1{
     padding-top: 1.5em;
