@@ -6,10 +6,10 @@
 
 .stylist-card {
     display: grid;
-    grid-template-columns: 450px 1.5fr;
+    grid-template-columns: 1fr 3fr;
     gap: 20px;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     background: #fff;
     position: relative;
     color: #000;
@@ -17,6 +17,9 @@
     text-align: left;
 }
 
+.stylist-card .description {
+    align-self: start;
+}
 .stylist-card::after {
     content: "";
     position: absolute;
@@ -30,7 +33,7 @@
 }
 
 .stylist-card img {
-  width: 80%;
+  width: 100%;
     aspect-ratio: 1 / 1; 
 
     object-fit: cover; 
@@ -40,6 +43,7 @@
     margin-bottom: 15px;
     display: block;
     border-radius: 8px;
+    min-width: 175px;
     max-width: 400px;
 }
 
@@ -84,7 +88,7 @@
     font-weight: 900;
 }
 
-a {
+.stylist-section a {
     color: #000;
 }
 
@@ -93,4 +97,7 @@ a {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+    .stylist-card p {
+    font-size: 0.8em;
+}
 }
