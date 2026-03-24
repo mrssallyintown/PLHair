@@ -53,7 +53,7 @@
 	if (!$('#menu').length) {
     var $menuInner = $('<div id="menu"><ul></ul></div>');
 
-    $('#nav > ul > li').each(function () {
+	$('#nav > ul > li').each(function () {
 
         if ($(this).hasClass('dropdown')) {
 
@@ -117,3 +117,7 @@ $('#menu')
 		}
 
 })(jQuery);
+
+function confirmRedirect() {
+  return confirm("You are about to be redirected to an external booking site. Continue?")
+}

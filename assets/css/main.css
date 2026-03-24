@@ -3672,7 +3672,7 @@ h1 + h1 {
   display: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   #header nav ul li a {
     display: none;
   }
@@ -3685,7 +3685,7 @@ h1 + h1 {
   }
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 1001px) {
   #header nav a.menuToggle {
     display: none !important;
   }
@@ -3711,34 +3711,6 @@ h1 + h1 {
 
 #header nav > ul > li:first-child {
   margin-left: 0;
-}
-
-#header .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-#header .dropdown-content {
-  display: none;
-  position: absolute;
-  background: #e9e8ea;
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-
-#header .dropdown-content a {
-  color: #000;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#header .dropdown:hover .dropdown-content {
-  display: block;
 }
 
 /* Banner */
