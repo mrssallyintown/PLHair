@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     track.style.transition = animate ? "transform 0.5s ease" : "none";
     track.style.transform = `translateX(-${index * getCardWidth()}px)`;
   }
-
+  
   function initSlider() {
     // Remove existing clones
     track.querySelectorAll(".review-card").forEach(c => c.remove());
@@ -80,6 +80,38 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => initSlider(), 150);
+  });
+
+let startX = 0;
+
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener("touchend", (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (diff > 50) nextBtn.click();
+    else if (diff < -50) prevBtn.click();
+  });
+
+  // Mouse drag (desktop small window)
+  let isDragging = false;
+
+  track.addEventListener("mousedown", (e) => {
+    startX = e.clientX;
+    isDragging = true;
+  });
+
+  track.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    const diff = startX - e.clientX;
+    if (diff > 50) nextBtn.click();
+    else if (diff < -50) prevBtn.click();
+    isDragging = false;
+  });
+
+  track.addEventListener("mouseleave", () => {
+    isDragging = false;
   });
 
   initSlider();

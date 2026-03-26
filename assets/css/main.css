@@ -4009,11 +4009,22 @@ button.nav.next {
   color: #e9e8ea;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
+  .reviews-section {
+    position: relative;
+    padding: 60px 0;
+  }
+
+  .slider-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
   .review-card {
     flex: 0 0 100%;
-    padding: 20px;
+    padding: 20px 40px;
     box-sizing: border-box;
+    border-radius: 0;
   }
 
   .slider-track {
@@ -4021,7 +4032,35 @@ button.nav.next {
   }
 
   .slider {
-    gap: 10px;
+    gap: 0;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .slider::before {
+    content: "\276E";
+    font-size: 20px;
+    color: #000;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .slider::after {
+    content: "\276F";
+    font-size: 20px;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
   }
 }
 
