@@ -4013,6 +4013,15 @@ button.nav.next {
   .review-card {
     flex: 0 0 100%;
     padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .slider-track {
+    gap: 0;
+  }
+
+  .slider {
+    gap: 10px;
   }
 }
 
