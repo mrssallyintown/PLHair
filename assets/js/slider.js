@@ -82,37 +82,29 @@ document.addEventListener("DOMContentLoaded", function () {
     resizeTimer = setTimeout(() => initSlider(), 150);
   });
 
-let startX = 0;
+  function updateDots() {
+    if (window.innerWidth > 900) return;
+    const dots = document.querySelectorAll('.dot');
+    const realIndex = ((index - visibleCount) % originalCards.length + originalCards.length) % originalCards.length;
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === realIndex));
+  }
 
-  track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
+  track.addEventListener("transitionend", () => {
+    updateDots();
   });
 
-  track.addEventListener("touchend", (e) => {
-    const diff = startX - e.changedTouches[0].clientX;
-    if (diff > 50) nextBtn.click();
-    else if (diff < -50) prevBtn.click();
-  });
+  let startX = 0;
+  if (window.innerWidth <= 900) {
+    track.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
 
-  // Mouse drag (desktop small window)
-  let isDragging = false;
-
-  track.addEventListener("mousedown", (e) => {
-    startX = e.clientX;
-    isDragging = true;
-  });
-
-  track.addEventListener("mouseup", (e) => {
-    if (!isDragging) return;
-    const diff = startX - e.clientX;
-    if (diff > 50) nextBtn.click();
-    else if (diff < -50) prevBtn.click();
-    isDragging = false;
-  });
-
-  track.addEventListener("mouseleave", () => {
-    isDragging = false;
-  });
-
+    track.addEventListener("touchend", (e) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (diff > 50) nextBtn.click();
+      else if (diff < -50) prevBtn.click();
+    });
+  }
   initSlider();
+  updateDots();
 });

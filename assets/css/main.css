@@ -3992,7 +3992,6 @@ p.review-text {
 
 a.review-text {
   color: #323437;
-  bottom: 0px;
   font-weight: 700;
 }
 
@@ -4009,7 +4008,7 @@ button.nav.next {
   color: #e9e8ea;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 490px) {
   .reviews-section {
     position: relative;
     padding: 60px 0;
@@ -4037,30 +4036,6 @@ button.nav.next {
 
   .nav {
     display: none;
-  }
-
-  .slider::before {
-    content: "\276E";
-    font-size: 20px;
-    color: #000;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    pointer-events: none;
-  }
-
-  .slider::after {
-    content: "\276F";
-    font-size: 20px;
-    color: #000;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    pointer-events: none;
   }
 }
 
@@ -4282,6 +4257,26 @@ ul.footer-icons li {
 }
 
 @media screen and (max-width: 480px) {
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background 0.3s ease;
+    opacity: 50%;
+  }
+
+  .dot.active {
+    background: #323437;
+    opacity: 50%;
+  }
   #footer .copyright li {
     border: 0;
     display: block;
