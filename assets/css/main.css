@@ -2200,6 +2200,10 @@ input[type="radio"] + label:before {
 
 /* Image */
 
+img {
+  border-radius: 10px;
+}
+
 .image {
   border-radius: 3px;
   border: 0;
@@ -2927,6 +2931,12 @@ button:disabled,
   color: #a4b07a;
 }
 
+@media (max-width: 736px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
 .wrapper.style1 strong,
 .wrapper.style1 b {
   color: #ffffff;
@@ -3265,7 +3275,7 @@ button:disabled,
 .wrapper.style5 {
   background-color: #ffffff;
   color: #435017;
-  padding: 0.5em 0 4em 0;
+  padding: 0.5em 50px 4em 50px;
 }
 
 .wrapper.style5 strong,
@@ -3954,6 +3964,7 @@ body.is-preload #banner:after {
   text-align: left;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 @media (max-width: 900px) {
@@ -3996,6 +4007,13 @@ button.nav.prev {
 
 button.nav.next {
   color: #e9e8ea;
+}
+
+@media (max-width: 900px) {
+  .review-card {
+    flex: 0 0 100%;
+    padding: 20px;
+  }
 }
 
 /* CTA */
@@ -4149,6 +4167,7 @@ body.is-mobile #main > header {
   font-size: 30px;
   line-height: 1.1;
   white-space: nowrap;
+  text-align: center;
 }
 
 .line {
@@ -4457,6 +4476,7 @@ p.gallery {
 .gallery-item {
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .gallery-item img {
