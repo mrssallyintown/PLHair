@@ -6,8 +6,9 @@ var onloadCallback = function() {
     alert("grecaptcha is ready!");
   };
 
-const form = document.querySelector('section.wrapper.container form');
+const form = document.getElementById('contact-form');
 const feedback = document.getElementById('form-feedback');
+feedback.style.textAlign = 'left';
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
