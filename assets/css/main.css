@@ -2652,10 +2652,8 @@ button:disabled,
   input[type="button"],
   button,
   .button {
-    height: auto; 
-    line-height: normal; 
-    padding: 0.75em 1.5em;
-    font-size: 0.95em; 
+    height: 3.75em;
+    line-height: 3.75em;
   }
 }
 
@@ -4285,6 +4283,15 @@ ul.footer-icons li {
     line-height: 1.65em;
     margin: 0;
     padding: 0.5em 0;
+  }
+
+  ul.actions li .button {
+    width: auto !important;
+    display: inline-block;
+  }
+  
+  ul.actions {
+    text-align: center;
   }
 }
 
