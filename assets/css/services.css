@@ -20,6 +20,7 @@
   background: #fff;
   text-align: left;
   margin: 1.5em;
+  min-height: 700px;
   
 }
 .consult-section {
@@ -150,6 +151,7 @@ h5{
   width: 350px; 
   height: 450px; 
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .price-row {
@@ -213,10 +215,29 @@ h5{
 
   .container {
     grid-template-columns: 1fr;
+    margin: 0.5em;
+    gap: 10px;
   }
 
   .container > .column.services {
     min-width: auto;
+  }
+
+  .column {
+    padding: 10px 15px;
+  }
+
+  .service-item {
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+  }
+
+  .price-row {
+    margin: 6px 0;
+  }
+
+  .service-category h1 {
+    padding-top: 0.5em;
   }
 
   html,

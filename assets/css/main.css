@@ -2652,8 +2652,10 @@ button:disabled,
   input[type="button"],
   button,
   .button {
-    height: 3.75em;
-    line-height: 3.75em;
+    height: auto; 
+    line-height: normal; 
+    padding: 0.75em 1.5em;
+    font-size: 0.95em; 
   }
 }
 

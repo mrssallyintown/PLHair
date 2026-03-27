@@ -34,17 +34,17 @@
 
 .stylist-card img {
   width: 100%;
-    aspect-ratio: 1 / 1; 
+aspect-ratio: 1 / 1; 
 
-    object-fit: cover; 
+object-fit: cover; 
 
-    object-position: center; 
+object-position: center; 
 
-    margin-bottom: 15px;
-    display: block;
-    border-radius: 8px;
-    min-width: 175px;
-    max-width: 400px;
+margin-bottom: 15px;
+display: block;
+border-radius: 8px;
+min-width: 175px;
+max-width: 400px;
 }
 
 .image-wrapper {
@@ -92,12 +92,24 @@
     color: #000;
 }
 
-@media screen and (max-width: 480px) {
-    .stylist-grid {
+@media screen and (max-width: 768px) {
+    .stylist-card {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 15px;
     }
-    .stylist-card p {
-    font-size: 0.8em;
-}
+
+    .image-wrapper {
+        justify-content: center;
+    }
+    
+    .description h3,
+    .description > p:first-of-type {
+        text-align: center;
+    }
+
+    .stylist-card img {
+        min-width: 0; 
+        max-width: 250px;
+        margin: 0 auto;
+    }
 }

@@ -117,7 +117,3 @@ $('#menu')
 		}
 
 })(jQuery);
-
-function confirmRedirect() {
-  return confirm("You are about to be redirected to an external booking site. Continue?")
-}
