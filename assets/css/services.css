@@ -23,17 +23,6 @@
   min-height: 700px;
   
 }
-.consult-section {
-  margin-top: 2em;
-}
-
-.consult-section h3 {
-  margin: 0;
-}
-
-.consult-section h4 {
-  margin-top: 1em;
-}
 
 body.landing #page-wrapper {
 	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/service-banner.webp");
@@ -207,7 +196,7 @@ h5{
 
 @media (max-width: 736px) {
   .service-category h1{
-    padding-top: 1.5em;
+    margin-top: 1.5em;
   }
   .categories {
     display: none;
@@ -238,6 +227,10 @@ h5{
 
   .service-category h1 {
     padding-top: 0.5em;
+  }
+
+  .wrapper.style5 {
+    padding: 0.1em;
   }
 
   html,
