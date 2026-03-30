@@ -4429,6 +4429,7 @@ p a:hover {
 }
 
 .info-block a {
+  font-size: 14px;
   color: #555;
 }
 
