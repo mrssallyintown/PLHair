@@ -3591,6 +3591,7 @@ h1 + h1 {
 }
 
 .logo h1 {
+  color: #323437;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -4283,15 +4284,6 @@ ul.footer-icons li {
     line-height: 1.65em;
     margin: 0;
     padding: 0.5em 0;
-  }
-
-  ul.actions li .button {
-    width: auto !important;
-    display: inline-block;
-  }
-  
-  ul.actions {
-    text-align: center;
   }
 }
 
