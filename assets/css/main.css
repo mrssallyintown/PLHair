@@ -4427,6 +4427,10 @@ p a:hover {
   line-height: 1.6;
 }
 
+.info-block a {
+  color: #555;
+}
+
 hr {
   border: none;
   border-top: 1px solid #ddd;
