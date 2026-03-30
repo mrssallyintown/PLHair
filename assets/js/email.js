@@ -1,5 +1,11 @@
+import { env } from "cloudflare:workers";
+
+const EMAILJS_API_KEY = env.EMAILJS_API_KEY;
+const SERVICE_ID = env.SERVICE_ID;
+const TEMPLATE_ID = env.TEMPLATE_ID;
+
 (function(){
-    emailjs.init("EMAILJS_API_KEY");
+    emailjs.init(`${EMAILJS_API_KEY}`);
 })();
 
 var onloadCallback = function() {
@@ -46,7 +52,7 @@ form.addEventListener('submit', function(event) {
         
     };
 
-    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', templateParams)
+    emailjs.send(`${SERVICE_ID}`, `${TEMPLATE_ID}`, templateParams)
     .then(function(response) {
         feedback.textContent = 'Your message has been sent successfully!';
         feedback.style.color = 'green';
